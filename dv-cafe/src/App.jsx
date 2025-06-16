@@ -1,11 +1,26 @@
+import Hero from "./components/Hero"
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ImageCarousel from "./ImageCarousel";
 
 function App() {
 
 
   return (
     <>
-      <p className="text-yellow-400">hi dv</p>
+     <Router>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <ImageCarousel />
+          </>
+        } />
+       
+
+
+      </Routes>
+    </Router>
     </>
   )
 }

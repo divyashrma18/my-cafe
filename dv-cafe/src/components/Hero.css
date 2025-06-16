@@ -1,0 +1,227 @@
+.logo {
+    font-family: "Pacifico", serif;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.hero {
+    background-color: #FDFAEF;
+}
+
+.nav{
+    background-color: #FDFAEF;
+}
+
+.logo:hover {
+    color: #af601a; 
+    animation: shake 0.3s ease-in-out;
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px) rotate(-2deg); }
+    50% { transform: translateX(3px) rotate(2deg); }
+    75% { transform: translateX(-3px) rotate(-2deg); }
+    100% { transform: translateX(0); }
+}
+
+.nav-items {
+    display: flex;
+    gap: 30px;
+    font-family: "Sour Gummy", serif;
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.nav-items p {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.nav-items p:hover {
+    transform: scale(1.1);
+    color: #af601a;}
+
+
+.nav-items p::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #af601a;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+
+.nav-items p:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+.middle {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 11px;
+    width: 300px; 
+    height: 50px;
+    background-color: #FFF4E0;
+    border-radius: 40px;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.middle .google{
+    font-family: "Newsreader", serif;
+    font-size: 20px;
+    background-color: #FFF4E0;
+}
+.middle .rating{
+    font-family: "Newsreader", serif;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #FFF4E0;
+}
+.star1 {
+    background-color: #FFF4E0;
+    
+}
+.star{
+    background-color: #FFF4E0;
+    display: flex;
+}
+
+.middle > * {
+    flex-shrink: 1;
+    min-width: 0;  
+}
+.google, .rating {
+    font-size: 16px;
+}
+.star {
+    gap: 3px;
+}
+
+.bottom {
+    font-family: "42dot Sans", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+}
+.bottom h3{
+    font-size: 39px;
+    font-weight: 900;
+}
+.bottom p{
+    font-weight: 400;
+    font-size: 23px;
+    font-family: "Sour Gummy", serif;
+
+}
+
+.bottom button {
+    height: 40px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+.bottom button:hover {
+    animation: shake 0.3s ease-in-out;
+    background-color: #af601a;
+}
+
+
+/* --- Responsive Font Sizes --- */
+
+.logo {
+  font-size: clamp(18px, 2.5vw, 25px);
+}
+
+.nav-items {
+  font-size: clamp(18px, 2.5vw, 28px);
+}
+
+.middle .google,
+.middle .rating {
+  font-size: clamp(14px, 1.8vw, 20px);
+}
+
+.bottom h3 {
+  font-size: clamp(24px, 4vw, 39px);
+}
+
+.bottom p {
+  font-size: clamp(16px, 2.5vw, 23px);
+}
+
+.bottom button {
+  width: clamp(150px, 20vw, 200px);
+  height: clamp(35px, 6vw, 40px);
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+/* --- Responsive Layout Tweaks --- */
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 15px;
+    padding: 20px 30px;
+  }
+
+  .nav-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bottom {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .middle {
+    width: fit-content;
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 15px 20px;
+  }
+
+  .nav-items {
+    gap: 15px;
+  }
+
+  .bottom h3,
+  .bottom p {
+    text-align: center;
+  }
+}
