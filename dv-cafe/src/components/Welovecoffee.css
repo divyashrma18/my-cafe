@@ -1,0 +1,139 @@
+.loveimg{
+    width: 500px;
+    height: 50px;
+    margin-bottom: 560px;
+    margin-left: 100px;
+    border-radius: 30px;
+}
+.main-coffee{
+    background-color: #FDFAEF;
+    height: 900px;
+
+}
+.coffee{
+    /* background-color: #FDFAEF; */
+    background-color: #FFF4E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+   margin-top: 100px;
+   gap: 100px;
+   position: relative;
+   top: 100px;
+   /* padding-top: 200px; */
+  margin: 0 70px;
+  border-radius: 30px;
+  
+}
+.right-love{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: "Sour Gummy", serif;}
+.right-love h3{
+
+  
+    font-size: 40px;
+}
+.right-love p{
+    font-size: 20px;
+    font-weight: 300;
+ 
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px) rotate(-2deg); }
+    50% { transform: translateX(3px) rotate(2deg); }
+    75% { transform: translateX(-3px) rotate(-2deg); }
+    100% { transform: translateX(0); }
+}
+
+
+
+ button:hover {
+    animation: shake 0.3s ease-in-out;
+    background-color: #af601a;
+}
+
+@media (max-width: 1024px) {
+    .coffee {
+      flex-direction: column;
+      height: auto;
+      padding: 4rem 2rem;
+      gap: 4rem;
+      margin: 0 2rem;
+    }
+  
+    .loveimg {
+      width: clamp(28rem, 80vw, 50rem);
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .loveimg img {
+      width: 100%;
+      height: auto;
+      border-radius: 3rem;
+    }
+  
+    .right-love {
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+    }
+  
+    .right-love h3 {
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+    }
+  
+    .right-love p {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    .location {
+      align-items: center;
+    }
+  
+    .location button {
+      font-size: 1.6rem;
+      width: 100%;
+      max-width: 18rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .right-love h3 {
+      font-size: clamp(2rem, 6vw, 2.8rem);
+    }
+  
+    .right-love p {
+      font-size: clamp(1.4rem, 4vw, 1.6rem);
+    }
+  
+    .loveimg {
+      margin-left: 0;
+    }
+  
+    .location h3 {
+      font-size: 1.8rem;
+    }
+  
+    .location button {
+      height: 4.6rem;
+      font-size: 1.4rem;
+    }
+  
+    .logo {
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  

@@ -1,0 +1,130 @@
+.news-container {
+    background-color: #FDFAEF;
+    padding-top: 140px;
+    font-family: "42dot Sans", serif;
+}
+  
+.news-heading {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    opacity: 0;
+    font-family: "Sour Gummy", serif;
+
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 3s ease-out;
+}
+
+.news-heading.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+  
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 0 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+  
+.news-card {
+    background-color: #FDFAEF;
+    border-radius: 0.75rem;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-image {
+    width: 390px;
+    height: 500px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1rem;
+}
+
+.news-date {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.news-title {
+    font-size: 27px;
+    width: 370px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+@media (max-width: 1024px) {
+    .news-heading {
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      padding-left: 3rem;
+      text-align: center;
+    }
+  
+    .news-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+  
+    .news-card {
+      margin: 0 auto;
+    }
+  
+    .news-image {
+      width: 100%;
+      height: auto;
+      border-radius: 2rem;
+    }
+  
+    .news-title {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .news-heading {
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  
+    .news-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 0 1.5rem;
+    }
+  
+    .news-card {
+      width: 100%;
+    }
+  
+    .news-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .news-title {
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+    }
+  
+    .news-date {
+      font-size: 1.2rem;
+    }
+  }
+  
